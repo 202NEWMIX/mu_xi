@@ -2,5 +2,9 @@
   "Home": {
     "title": "你好，木曦",
     "description": "这是一个 Next.js 多语言示例。"
+  },
+  "Test": {
+    "title": "Heee21e21w21w21",
+    "description": "这是测试."
   }
 }

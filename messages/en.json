@@ -2,5 +2,9 @@
   "Home": {
     "title": "Hello, Mu Xi",
     "description": "This is a Next.js i18n demo."
+  },
+  "Test": {
+    "title": "Hello, Mu Xi",
+    "description": "This is a Test."
   }
 }
