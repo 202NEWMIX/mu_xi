@@ -10,17 +10,11 @@ type ShinyButtonProps = {
 
 export default function ShinyButton({ href, label, variant = "primary" }: ShinyButtonProps) {
   const base = "relative inline-flex items-center px-6 py-3 rounded-lg font-semibold overflow-hidden transition transform-gpu";
-  const themeClass = variant === "primary" ? "text-on-primary" : "text-foreground";
-  const themeStyle =
-    variant === "primary"
-      ? {
-          backgroundImage: "linear-gradient(90deg, var(--color-primary), var(--color-accent))",
-          boxShadow: "0 10px 30px rgba(139,92,246,0.25)",
-        }
-      : {
-          backgroundColor: "var(--color-card)",
-          border: "1px solid var(--color-border)",
-        };
+  const themeClass = "text-on-primary";
+  const themeStyle = {
+    backgroundImage: "linear-gradient(90deg, var(--color-primary), var(--color-accent))",
+    boxShadow: "0 10px 30px rgba(34,197,94,0.25)",
+  };
 
   return (
     <Link href={href} className={`${base} ${themeClass}`} style={themeStyle}>

@@ -32,7 +32,7 @@ export default function ThemeToggle() {
     <button
       onClick={toggle}
       aria-label="切换主题"
-      className="inline-flex items-center gap-2 rounded-lg px-3 py-2 border border-border bg-card text-foreground/80 hover:text-foreground hover:border-foreground/40 transition-colors"
+      className="inline-flex items-center gap-2 rounded-lg px-3 py-2 bg-primary text-on-primary hover:opacity-90 transition-colors"
     >
       <span className="text-sm font-medium">{theme === "dark" ? "夜间" : "日间"}</span>
       <span aria-hidden className="text-lg">{theme === "dark" ? "🌙" : "☀️"}</span>

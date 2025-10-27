@@ -10,8 +10,8 @@ export default function CTA({ href, label, variant = "primary" }: CTAProps) {
   const base = "inline-flex items-center px-5 py-3 rounded-md font-medium transition-colors";
   const styles = {
     primary: "bg-primary text-on-primary hover:opacity-90",
-    secondary: "bg-secondary text-on-secondary hover:opacity-90",
-    ghost: "bg-transparent border border-border text-foreground hover:bg-card",
+    secondary: "bg-primary text-on-primary hover:opacity-90",
+    ghost: "bg-transparent border border-primary text-primary hover:bg-primary/10",
   } as const;
 
   return (

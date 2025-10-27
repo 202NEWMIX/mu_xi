@@ -42,8 +42,7 @@ export default function LocaleToggle() {
       segs.push(next);
     }
     const newPath = segs.join("/");
-    const hash = typeof window !== "undefined" ? window.location.hash : "";
-    router.push(newPath + hash);
+    router.push(newPath, { scroll: false });
     setOpen(false);
   };
 
@@ -55,7 +54,7 @@ export default function LocaleToggle() {
         aria-label="选择语言"
         aria-haspopup="menu"
         aria-expanded={open ? "true" : "false"}
-        className="inline-flex items-center gap-2 rounded-lg px-2.5 py-2 border border-border bg-card text-foreground/80 hover:text-foreground hover:border-foreground/40 transition-colors"
+        className="inline-flex items-center gap-2 rounded-lg px-2.5 py-2 bg-primary text-on-primary hover:opacity-90 transition-colors"
       >
         <span aria-hidden className="text-base">🌐</span>
         <span className="text-sm font-medium">{currentLocale === "zh" ? "中文" : "EN"}</span>
