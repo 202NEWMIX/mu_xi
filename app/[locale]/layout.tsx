@@ -32,6 +32,7 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
+      {/* 32189038210938210382109389021 */}
       {children}
     </NextIntlClientProvider>
   );

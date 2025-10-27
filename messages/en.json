@@ -1,10 +1,19 @@
 {
   "Home": {
-    "title": "Hello, Mu Xi",
-    "description": "This is a Next.js i18n demo."
+    "title": "Hangzhou Mu Xi",
+    "description": "We craft creative mini games with stunning animations.",
+    "ctaPrimary": "Get Started",
+    "ctaSecondary": "Contact Us",
+    "sections": {
+      "workTitle": "Selected Works",
+      "featuresTitle": "Capabilities",
+      "partnersTitle": "Partners",
+      "statsTitle": "Our Stats",
+      "contactTitle": "Contact Us"
+    }
   },
   "Test": {
-    "title": "Hello, Mu Xi",
-    "description": "This is a Test."
+    "title": "Components & Animation Demo",
+    "description": "A test page showcasing reusable components and effects."
   }
 }

@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# mx-main assets (ignore copied external resources)
+public/mx-main/*
+!public/mx-main/.gitkeep
+!public/mx-main/README.md

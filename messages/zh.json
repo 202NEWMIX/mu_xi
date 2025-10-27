@@ -1,10 +1,19 @@
 {
   "Home": {
-    "title": "你好，木曦",
-    "description": "这是一个 Next.js 多语言示例。"
+    "title": "杭州沐睎",
+    "description": "我们专注于创意小游戏开发与极致动画体验。",
+    "ctaPrimary": "开始探索",
+    "ctaSecondary": "联系我们",
+    "sections": {
+      "workTitle": "精选作品",
+      "featuresTitle": "我们的能力",
+      "partnersTitle": "合作伙伴",
+      "statsTitle": "我们的成绩",
+      "contactTitle": "联系我们"
+    }
   },
   "Test": {
-    "title": "Heee21e21w21w21",
-    "description": "这是测试."
+    "title": "组件与动画演示",
+    "description": "这是测试页面，展示封装的组件与动效。"
   }
 }
