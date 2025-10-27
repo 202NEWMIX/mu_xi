@@ -18,7 +18,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
           id="theme-init"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
-            __html: `try{var s=localStorage.getItem('theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;var t=s? s : (d?'dark':'light');if(t==='dark'){document.documentElement.classList.add('dark');}else{document.documentElement.classList.remove('dark');}}catch(e){}`,
+            __html: `try{var s=localStorage.getItem('theme');var t=s? s : 'light';var root=document.documentElement;root.classList.remove('dark','light');if(t==='dark'){root.classList.add('dark');}else{root.classList.add('light');}root.style.colorScheme=t;}catch(e){}`,
           }}
         />
       </head>

@@ -7,10 +7,12 @@ export default function ThemeToggle() {
   useEffect(() => {
     try {
       const stored = localStorage.getItem("theme");
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const next = stored === "dark" || (!stored && prefersDark) ? "dark" : "light";
+      const next = stored === "dark" ? "dark" : "light";
       setTheme(next);
-      document.documentElement.classList.toggle("dark", next === "dark");
+      const root = document.documentElement;
+      root.classList.remove("dark", "light");
+      root.classList.add(next);
+      (root as HTMLElement).style.colorScheme = next;
     } catch {}
   }, []);
 
@@ -20,7 +22,10 @@ export default function ThemeToggle() {
     try {
       localStorage.setItem("theme", next);
     } catch {}
-    document.documentElement.classList.toggle("dark", next === "dark");
+    const root = document.documentElement;
+    root.classList.remove("dark", "light");
+    root.classList.add(next);
+    (root as HTMLElement).style.colorScheme = next;
   };
 
   return (

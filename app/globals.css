@@ -37,6 +37,24 @@
   color-scheme: dark;
 }
 
+/* Explicit Light (Day) theme override to force day mode */
+.light {
+  --background: #f8fafc; /* slate-50 */
+  --foreground: #0b1021; /* deep navy text */
+
+  --color-primary: #7c3aed; /* violet-600 */
+  --color-secondary: #0891b2; /* cyan-600 */
+  --color-accent: #db2777; /* pink-600 */
+  --color-muted: #475569; /* slate-600 */
+  --color-border: #e5e7eb; /* gray-200 */
+  --color-card: #ffffff; /* white */
+  --color-on-primary: #ffffff; /* text on primary bg */
+  --color-on-secondary: #ffffff; /* text on secondary bg */
+
+  /* Ensure UI paints in light mode when explicitly forced */
+  color-scheme: light;
+}
+
 /* Tailwind v4 tokens mapping */
 @theme inline {
   --color-background: var(--background);
@@ -78,7 +96,7 @@
 
 /* System preference fallback (applies only when no explicit class set) */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not(.dark):not(.light) {
     --background: #0b1021;
     --foreground: #e6edf3;
 
@@ -139,4 +157,10 @@ body {
   opacity: 1;
   box-shadow: 0 0 12px var(--color-accent);
   transform: translateY(0.5px);
+}
+
+/* Smooth anchor scrolling and top offset */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
